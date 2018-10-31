@@ -1,0 +1,10 @@
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\bin\Debug\SCFRASystem_ServerClient.exe.config
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\bin\Debug\SCFRASystem_ServerClient.exe
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\bin\Debug\SCFRASystem_ServerClient.pdb
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\obj\Debug\SCFRASystem_ServerClient.LoginFrm.resources
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\obj\Debug\SCFRASystem_ServerClient.MainFrm.resources
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\obj\Debug\SCFRASystem_ServerClient.Properties.Resources.resources
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\obj\Debug\SCFRASystem_ServerClient.csproj.GenerateResource.Cache
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\obj\Debug\SCFRASystem_ServerClient.exe
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\obj\Debug\SCFRASystem_ServerClient.pdb
+D:\visual studio 2015\Projects\SCFRASystem_ServerClient\SCFRASystem_ServerClient\obj\Debug\SCFRASystem_ServerClient.csprojResolveAssemblyReference.cache
