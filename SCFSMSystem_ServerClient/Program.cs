@@ -18,7 +18,7 @@ namespace SCFSMSystem_ServerClient
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GisFrm());
+            Application.Run(new MainFrm());
         }
     }
 }

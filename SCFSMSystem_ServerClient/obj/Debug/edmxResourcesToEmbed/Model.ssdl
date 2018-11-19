@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xs373431671Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="UFSM_AreaInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AreaNum" Type="int" Nullable="false" />
+    <Property Name="Attribute" Type="tinyint" />
+    <Property Name="PopQuality" Type="tinyint" />
+    <Property Name="BuildingFireResistanceRating" Type="tinyint" />
+    <Property Name="PopDensity" Type="tinyint" />
+    <Property Name="BuildingYears" Type="tinyint" />
+    <Property Name="FireSafetyPropaganda" Type="tinyint" />
+    <Property Name="PowerLineLoad" Type="tinyint" />
+    <Property Name="FireSafetyManagement" Type="tinyint" />
+    <Property Name="AgingOfPowerLines" Type="tinyint" />
+    <Property Name="FireInspectionOfKeyBuildings" Type="tinyint" />
+    <Property Name="TimeFactor" Type="tinyint" />
+    <Property Name="EconomicDensity" Type="tinyint" />
+    <Property Name="HighBuildingsNum" Type="tinyint" />
+    <Property Name="UndergroundCrowdedSpace" Type="tinyint" />
+    <Property Name="DensityOfKeyBuildings" Type="tinyint" />
+    <Property Name="RoadCongestion" Type="tinyint" />
+    <Property Name="BuildingDensity" Type="tinyint" />
+    <Property Name="DistributionOfInflammableStorage" Type="tinyint" />
+    <Property Name="FireStationCapacityCoverage" Type="tinyint" />
+    <Property Name="FireStationEquipment" Type="tinyint" />
+    <Property Name="PublicFireFacilities" Type="tinyint" />
+    <Property Name="DepartmentalEmergencyResponse" Type="tinyint" />
+    <Property Name="FireAndRescuePlan" Type="tinyint" />
+    <Property Name="KeyBuildingsFirePreventBuilt" Type="tinyint" />
+    <Property Name="AreaUploadTime" Type="datetime" />
+    <Property Name="AreaAssessmentYear" Type="smallint" />
+    <Property Name="AreaRiskGrade" Type="tinyint" />
+    <Property Name="AreaSize" Type="int" />
+    <Property Name="AreaPop" Type="int" />
+  </EntityType>
+  <EntityType Name="UFSM_UserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="8" />
+    <Property Name="Authority" Type="nvarchar" MaxLength="8" Nullable="false" />
+    <Property Name="AreaNum" Type="int" />
+    <Property Name="Department" Type="nvarchar" MaxLength="64" />
+    <Property Name="Account" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="32" />
+    <Property Name="Telephone" Type="nvarchar" MaxLength="16" />
+  </EntityType>
+  <EntityContainer Name="xs373431671ModelStoreContainer">
+    <EntitySet Name="UFSM_AreaInfo" EntityType="Self.UFSM_AreaInfo" Schema="xs373431671" store:Type="Tables" />
+    <EntitySet Name="UFSM_UserInfo" EntityType="Self.UFSM_UserInfo" Schema="xs373431671" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

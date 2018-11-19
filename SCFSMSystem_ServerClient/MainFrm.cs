@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SCFSMSystem_ServerClient.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,8 @@ namespace SCFSMSystem_ServerClient
         }
 
         private void MainFrm_Load(object sender, EventArgs e)
-        {            
-            StaticStorage.MainFrm = this;    //将主窗体对象静态存储
+        {
+            StaticForm.MainForm = this;    //将主窗体对象静态存储
 
             LoginFrm myl = new LoginFrm();            //Main窗口加载前先加载登录窗口对象
             if (myl.ShowDialog() != DialogResult.OK)
@@ -51,23 +52,23 @@ namespace SCFSMSystem_ServerClient
 
         private void opGisFrmBtn_Click(object sender, EventArgs e)
         {
-            if(StaticStorage.GisFrm==null ||StaticStorage.GisFrm.IsDisposed)
+            if(StaticForm.GisForm==null)
             {
-                StaticStorage.GisFrm = new GisFrm();
-                StaticStorage.GisFrm.Show();
+                StaticForm.GisForm = new GisFrm();
+                StaticForm.GisForm.Show();
             }
             else
             {
-                StaticStorage.GisFrm.Show();
+                StaticForm.GisForm.Show();
             }
             this.Hide();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            if(StaticStorage.GisFrm!=null)
+            if(StaticForm.GisForm != null)
             {
-                StaticStorage.GisFrm.Close();
+                StaticForm.GisForm.Close();
             }
 
             this.Close();

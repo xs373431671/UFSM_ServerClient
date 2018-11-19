@@ -33,9 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>LogoIcon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ESRI.ArcGIS.3DAnalyst, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -81,8 +90,11 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,28 +106,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GisFrm.cs">
+    <Compile Include="BLL\UserInfoService.cs" />
+    <Compile Include="DAL\UserInfoDal.cs" />
+    <Compile Include="GisForm\GisFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GisFrm.Designer.cs">
+    <Compile Include="GisForm\GisFrm.Designer.cs">
       <DependentUpon>GisFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GisFrm_AttributeFrm.cs">
+    <Compile Include="GisForm\GisFrm_AttributeFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GisFrm_AttributeFrm.Designer.cs">
+    <Compile Include="GisForm\GisFrm_AttributeFrm.Designer.cs">
       <DependentUpon>GisFrm_AttributeFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="GisFrm_SelectFeatureFrm.cs">
+    <Compile Include="GisForm\GisFrm_SelectFeatureFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GisFrm_SelectFeatureFrm.Designer.cs">
+    <Compile Include="GisForm\GisFrm_SelectFeatureFrm.Designer.cs">
       <DependentUpon>GisFrm_SelectFeatureFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginFrm.cs">
+    <Compile Include="LoginForm\LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginFrm.Designer.cs">
+    <Compile Include="LoginForm\LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFrm.cs">
@@ -124,20 +138,41 @@
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StaticForm.cs" />
+    <Compile Include="Model\StaticUserInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlHelper.cs" />
-    <Compile Include="StaticStorage.cs" />
-    <EmbeddedResource Include="GisFrm.resx">
+    <Compile Include="Model\UFSM_AreaInfo.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UFSM_UserInfo.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GisForm\GisFrm.resx">
       <DependentUpon>GisFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GisFrm_AttributeFrm.resx">
+    <EmbeddedResource Include="GisForm\GisFrm_AttributeFrm.resx">
       <DependentUpon>GisFrm_AttributeFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GisFrm_SelectFeatureFrm.resx">
+    <EmbeddedResource Include="GisForm\GisFrm_SelectFeatureFrm.resx">
       <DependentUpon>GisFrm_SelectFeatureFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginFrm.resx">
+    <EmbeddedResource Include="LoginForm\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrm.resx">
@@ -153,6 +188,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="Model\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -167,7 +210,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LogoIcon.ico" />
+    <Content Include="Model\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

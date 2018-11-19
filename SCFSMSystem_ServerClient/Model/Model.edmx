@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="xs373431671Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="UFSM_AreaInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AreaNum" Type="int" Nullable="false" />
+          <Property Name="Attribute" Type="tinyint" />
+          <Property Name="PopQuality" Type="tinyint" />
+          <Property Name="BuildingFireResistanceRating" Type="tinyint" />
+          <Property Name="PopDensity" Type="tinyint" />
+          <Property Name="BuildingYears" Type="tinyint" />
+          <Property Name="FireSafetyPropaganda" Type="tinyint" />
+          <Property Name="PowerLineLoad" Type="tinyint" />
+          <Property Name="FireSafetyManagement" Type="tinyint" />
+          <Property Name="AgingOfPowerLines" Type="tinyint" />
+          <Property Name="FireInspectionOfKeyBuildings" Type="tinyint" />
+          <Property Name="TimeFactor" Type="tinyint" />
+          <Property Name="EconomicDensity" Type="tinyint" />
+          <Property Name="HighBuildingsNum" Type="tinyint" />
+          <Property Name="UndergroundCrowdedSpace" Type="tinyint" />
+          <Property Name="DensityOfKeyBuildings" Type="tinyint" />
+          <Property Name="RoadCongestion" Type="tinyint" />
+          <Property Name="BuildingDensity" Type="tinyint" />
+          <Property Name="DistributionOfInflammableStorage" Type="tinyint" />
+          <Property Name="FireStationCapacityCoverage" Type="tinyint" />
+          <Property Name="FireStationEquipment" Type="tinyint" />
+          <Property Name="PublicFireFacilities" Type="tinyint" />
+          <Property Name="DepartmentalEmergencyResponse" Type="tinyint" />
+          <Property Name="FireAndRescuePlan" Type="tinyint" />
+          <Property Name="KeyBuildingsFirePreventBuilt" Type="tinyint" />
+          <Property Name="AreaUploadTime" Type="datetime" />
+          <Property Name="AreaAssessmentYear" Type="smallint" />
+          <Property Name="AreaRiskGrade" Type="tinyint" />
+          <Property Name="AreaSize" Type="int" />
+          <Property Name="AreaPop" Type="int" />
+        </EntityType>
+        <EntityType Name="UFSM_UserInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="8" />
+          <Property Name="Authority" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="AreaNum" Type="int" />
+          <Property Name="Department" Type="nvarchar" MaxLength="64" />
+          <Property Name="Account" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="16" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="32" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="16" />
+        </EntityType>
+        <EntityContainer Name="xs373431671ModelStoreContainer">
+          <EntitySet Name="UFSM_AreaInfo" EntityType="Self.UFSM_AreaInfo" Schema="xs373431671" store:Type="Tables" />
+          <EntitySet Name="UFSM_UserInfo" EntityType="Self.UFSM_UserInfo" Schema="xs373431671" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="xs373431671Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="UFSM_AreaInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AreaNum" Type="Int32" Nullable="false" />
+          <Property Name="Attribute" Type="Byte" />
+          <Property Name="PopQuality" Type="Byte" />
+          <Property Name="BuildingFireResistanceRating" Type="Byte" />
+          <Property Name="PopDensity" Type="Byte" />
+          <Property Name="BuildingYears" Type="Byte" />
+          <Property Name="FireSafetyPropaganda" Type="Byte" />
+          <Property Name="PowerLineLoad" Type="Byte" />
+          <Property Name="FireSafetyManagement" Type="Byte" />
+          <Property Name="AgingOfPowerLines" Type="Byte" />
+          <Property Name="FireInspectionOfKeyBuildings" Type="Byte" />
+          <Property Name="TimeFactor" Type="Byte" />
+          <Property Name="EconomicDensity" Type="Byte" />
+          <Property Name="HighBuildingsNum" Type="Byte" />
+          <Property Name="UndergroundCrowdedSpace" Type="Byte" />
+          <Property Name="DensityOfKeyBuildings" Type="Byte" />
+          <Property Name="RoadCongestion" Type="Byte" />
+          <Property Name="BuildingDensity" Type="Byte" />
+          <Property Name="DistributionOfInflammableStorage" Type="Byte" />
+          <Property Name="FireStationCapacityCoverage" Type="Byte" />
+          <Property Name="FireStationEquipment" Type="Byte" />
+          <Property Name="PublicFireFacilities" Type="Byte" />
+          <Property Name="DepartmentalEmergencyResponse" Type="Byte" />
+          <Property Name="FireAndRescuePlan" Type="Byte" />
+          <Property Name="KeyBuildingsFirePreventBuilt" Type="Byte" />
+          <Property Name="AreaUploadTime" Type="DateTime" Precision="3" />
+          <Property Name="AreaAssessmentYear" Type="Int16" />
+          <Property Name="AreaRiskGrade" Type="Byte" />
+          <Property Name="AreaSize" Type="Int32" />
+          <Property Name="AreaPop" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UFSM_UserInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Authority" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AreaNum" Type="Int32" />
+          <Property Name="Department" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Account" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="xs373431671Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UFSM_AreaInfo" EntityType="Self.UFSM_AreaInfo" />
+          <EntitySet Name="UFSM_UserInfo" EntityType="Self.UFSM_UserInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="xs373431671ModelStoreContainer" CdmEntityContainer="xs373431671Entities">
+          <EntitySetMapping Name="UFSM_AreaInfo">
+            <EntityTypeMapping TypeName="xs373431671Model.UFSM_AreaInfo">
+              <MappingFragment StoreEntitySet="UFSM_AreaInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="AreaNum" ColumnName="AreaNum" />
+                <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+                <ScalarProperty Name="PopQuality" ColumnName="PopQuality" />
+                <ScalarProperty Name="BuildingFireResistanceRating" ColumnName="BuildingFireResistanceRating" />
+                <ScalarProperty Name="PopDensity" ColumnName="PopDensity" />
+                <ScalarProperty Name="BuildingYears" ColumnName="BuildingYears" />
+                <ScalarProperty Name="FireSafetyPropaganda" ColumnName="FireSafetyPropaganda" />
+                <ScalarProperty Name="PowerLineLoad" ColumnName="PowerLineLoad" />
+                <ScalarProperty Name="FireSafetyManagement" ColumnName="FireSafetyManagement" />
+                <ScalarProperty Name="AgingOfPowerLines" ColumnName="AgingOfPowerLines" />
+                <ScalarProperty Name="FireInspectionOfKeyBuildings" ColumnName="FireInspectionOfKeyBuildings" />
+                <ScalarProperty Name="TimeFactor" ColumnName="TimeFactor" />
+                <ScalarProperty Name="EconomicDensity" ColumnName="EconomicDensity" />
+                <ScalarProperty Name="HighBuildingsNum" ColumnName="HighBuildingsNum" />
+                <ScalarProperty Name="UndergroundCrowdedSpace" ColumnName="UndergroundCrowdedSpace" />
+                <ScalarProperty Name="DensityOfKeyBuildings" ColumnName="DensityOfKeyBuildings" />
+                <ScalarProperty Name="RoadCongestion" ColumnName="RoadCongestion" />
+                <ScalarProperty Name="BuildingDensity" ColumnName="BuildingDensity" />
+                <ScalarProperty Name="DistributionOfInflammableStorage" ColumnName="DistributionOfInflammableStorage" />
+                <ScalarProperty Name="FireStationCapacityCoverage" ColumnName="FireStationCapacityCoverage" />
+                <ScalarProperty Name="FireStationEquipment" ColumnName="FireStationEquipment" />
+                <ScalarProperty Name="PublicFireFacilities" ColumnName="PublicFireFacilities" />
+                <ScalarProperty Name="DepartmentalEmergencyResponse" ColumnName="DepartmentalEmergencyResponse" />
+                <ScalarProperty Name="FireAndRescuePlan" ColumnName="FireAndRescuePlan" />
+                <ScalarProperty Name="KeyBuildingsFirePreventBuilt" ColumnName="KeyBuildingsFirePreventBuilt" />
+                <ScalarProperty Name="AreaUploadTime" ColumnName="AreaUploadTime" />
+                <ScalarProperty Name="AreaAssessmentYear" ColumnName="AreaAssessmentYear" />
+                <ScalarProperty Name="AreaRiskGrade" ColumnName="AreaRiskGrade" />
+                <ScalarProperty Name="AreaSize" ColumnName="AreaSize" />
+                <ScalarProperty Name="AreaPop" ColumnName="AreaPop" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UFSM_UserInfo">
+            <EntityTypeMapping TypeName="xs373431671Model.UFSM_UserInfo">
+              <MappingFragment StoreEntitySet="UFSM_UserInfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Authority" ColumnName="Authority" />
+                <ScalarProperty Name="AreaNum" ColumnName="AreaNum" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Account" ColumnName="Account" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

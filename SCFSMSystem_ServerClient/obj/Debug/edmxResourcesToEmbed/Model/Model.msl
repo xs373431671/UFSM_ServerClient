@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="xs373431671ModelStoreContainer" CdmEntityContainer="xs373431671Entities">
+    <EntitySetMapping Name="UFSM_AreaInfo">
+      <EntityTypeMapping TypeName="xs373431671Model.UFSM_AreaInfo">
+        <MappingFragment StoreEntitySet="UFSM_AreaInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AreaNum" ColumnName="AreaNum" />
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="PopQuality" ColumnName="PopQuality" />
+          <ScalarProperty Name="BuildingFireResistanceRating" ColumnName="BuildingFireResistanceRating" />
+          <ScalarProperty Name="PopDensity" ColumnName="PopDensity" />
+          <ScalarProperty Name="BuildingYears" ColumnName="BuildingYears" />
+          <ScalarProperty Name="FireSafetyPropaganda" ColumnName="FireSafetyPropaganda" />
+          <ScalarProperty Name="PowerLineLoad" ColumnName="PowerLineLoad" />
+          <ScalarProperty Name="FireSafetyManagement" ColumnName="FireSafetyManagement" />
+          <ScalarProperty Name="AgingOfPowerLines" ColumnName="AgingOfPowerLines" />
+          <ScalarProperty Name="FireInspectionOfKeyBuildings" ColumnName="FireInspectionOfKeyBuildings" />
+          <ScalarProperty Name="TimeFactor" ColumnName="TimeFactor" />
+          <ScalarProperty Name="EconomicDensity" ColumnName="EconomicDensity" />
+          <ScalarProperty Name="HighBuildingsNum" ColumnName="HighBuildingsNum" />
+          <ScalarProperty Name="UndergroundCrowdedSpace" ColumnName="UndergroundCrowdedSpace" />
+          <ScalarProperty Name="DensityOfKeyBuildings" ColumnName="DensityOfKeyBuildings" />
+          <ScalarProperty Name="RoadCongestion" ColumnName="RoadCongestion" />
+          <ScalarProperty Name="BuildingDensity" ColumnName="BuildingDensity" />
+          <ScalarProperty Name="DistributionOfInflammableStorage" ColumnName="DistributionOfInflammableStorage" />
+          <ScalarProperty Name="FireStationCapacityCoverage" ColumnName="FireStationCapacityCoverage" />
+          <ScalarProperty Name="FireStationEquipment" ColumnName="FireStationEquipment" />
+          <ScalarProperty Name="PublicFireFacilities" ColumnName="PublicFireFacilities" />
+          <ScalarProperty Name="DepartmentalEmergencyResponse" ColumnName="DepartmentalEmergencyResponse" />
+          <ScalarProperty Name="FireAndRescuePlan" ColumnName="FireAndRescuePlan" />
+          <ScalarProperty Name="KeyBuildingsFirePreventBuilt" ColumnName="KeyBuildingsFirePreventBuilt" />
+          <ScalarProperty Name="AreaUploadTime" ColumnName="AreaUploadTime" />
+          <ScalarProperty Name="AreaAssessmentYear" ColumnName="AreaAssessmentYear" />
+          <ScalarProperty Name="AreaRiskGrade" ColumnName="AreaRiskGrade" />
+          <ScalarProperty Name="AreaSize" ColumnName="AreaSize" />
+          <ScalarProperty Name="AreaPop" ColumnName="AreaPop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UFSM_UserInfo">
+      <EntityTypeMapping TypeName="xs373431671Model.UFSM_UserInfo">
+        <MappingFragment StoreEntitySet="UFSM_UserInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Authority" ColumnName="Authority" />
+          <ScalarProperty Name="AreaNum" ColumnName="AreaNum" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
