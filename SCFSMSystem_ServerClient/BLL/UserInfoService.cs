@@ -16,15 +16,7 @@ namespace SCFSMSystem_ServerClient.BLL
             UFSM_UserInfo user = userInfoDal.CheckUserInfo(account, pwd, out returnMessage);
             if(user!=null)
             {
-                StaticUserInfo.Account=user.Account;
-                StaticUserInfo.Password=user.Password;
-                StaticUserInfo.ID=user.ID;
-                StaticUserInfo.Name=user.Name;
-                StaticUserInfo.Authority=user.Authority;
-                StaticUserInfo.AreaNum=user.AreaNum;
-                StaticUserInfo.Department=user.Department;
-                StaticUserInfo.Email=user.Email;
-                StaticUserInfo.Telephone=user.Telephone;
+                StaticObject.user = user;
                 return true;
             }
             else

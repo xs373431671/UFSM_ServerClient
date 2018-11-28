@@ -20,8 +20,8 @@ namespace SCFSMSystem_ServerClient.DAL
                     var sql = "select * from UFSM_UserInfo where Account=@Account and Password=@Password and Authority='admin'";
                     var parameter = new DbParameter[]
                     {
-                    new SqlParameter {ParameterName = "@Account", Value = account},
-                    new SqlParameter {ParameterName = "@Password", Value = pwd}
+                        new SqlParameter {ParameterName = "@Account", Value = account},
+                        new SqlParameter {ParameterName = "@Password", Value = pwd}
                     };
                     var userList = db.Database.SqlQuery<UFSM_UserInfo>(sql,parameter);
                     foreach(UFSM_UserInfo user in userList)

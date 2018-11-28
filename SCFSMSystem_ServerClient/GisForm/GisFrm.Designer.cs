@@ -34,6 +34,11 @@
             this.加载数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.加载mxd地图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.加载文件地理数据库数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.查询SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.选评估区属性查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.编辑EToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.同步火灾风险评估结果ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.列表展示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.exitBtn = new System.Windows.Forms.Button();
             this.axLicenseControl1 = new ESRI.ArcGIS.Controls.AxLicenseControl();
@@ -45,8 +50,6 @@
             this.查看属性表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.缩放到图层ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.查询SToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.选评估区属性查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.axToolbarControl1 = new ESRI.ArcGIS.Controls.AxToolbarControl();
             this.eagleEyeMapControl = new ESRI.ArcGIS.Controls.AxMapControl();
             this.mainMapControl = new ESRI.ArcGIS.Controls.AxMapControl();
@@ -68,11 +71,12 @@
             this.menuStrip.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.加载数据ToolStripMenuItem,
-            this.查询SToolStripMenuItem});
+            this.查询SToolStripMenuItem,
+            this.编辑EToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip.Size = new System.Drawing.Size(860, 24);
+            this.menuStrip.Size = new System.Drawing.Size(860, 25);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -85,7 +89,7 @@
             this.加载数据ToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
             this.加载数据ToolStripMenuItem.Name = "加载数据ToolStripMenuItem";
             this.加载数据ToolStripMenuItem.ShortcutKeyDisplayString = "F";
-            this.加载数据ToolStripMenuItem.Size = new System.Drawing.Size(87, 18);
+            this.加载数据ToolStripMenuItem.Size = new System.Drawing.Size(87, 19);
             this.加载数据ToolStripMenuItem.Text = "文件（F）";
             // 
             // 加载mxd地图ToolStripMenuItem
@@ -101,6 +105,47 @@
             this.加载文件地理数据库数据ToolStripMenuItem.Size = new System.Drawing.Size(239, 22);
             this.加载文件地理数据库数据ToolStripMenuItem.Text = "加载文件地理数据库数据";
             this.加载文件地理数据库数据ToolStripMenuItem.Click += new System.EventHandler(this.加载文件地理数据库数据ToolStripMenuItem_Click);
+            // 
+            // 查询SToolStripMenuItem
+            // 
+            this.查询SToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.选评估区属性查询ToolStripMenuItem});
+            this.查询SToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.查询SToolStripMenuItem.Name = "查询SToolStripMenuItem";
+            this.查询SToolStripMenuItem.ShortcutKeyDisplayString = "S";
+            this.查询SToolStripMenuItem.Size = new System.Drawing.Size(87, 19);
+            this.查询SToolStripMenuItem.Text = "查询（S）";
+            // 
+            // 选评估区属性查询ToolStripMenuItem
+            // 
+            this.选评估区属性查询ToolStripMenuItem.Name = "选评估区属性查询ToolStripMenuItem";
+            this.选评估区属性查询ToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.选评估区属性查询ToolStripMenuItem.Text = "选评估区属性查询";
+            this.选评估区属性查询ToolStripMenuItem.Click += new System.EventHandler(this.选评估区属性查询ToolStripMenuItem_Click);
+            // 
+            // 编辑EToolStripMenuItem
+            // 
+            this.编辑EToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.同步火灾风险评估结果ToolStripMenuItem,
+            this.列表展示ToolStripMenuItem});
+            this.编辑EToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.编辑EToolStripMenuItem.Name = "编辑EToolStripMenuItem";
+            this.编辑EToolStripMenuItem.ShortcutKeyDisplayString = "e";
+            this.编辑EToolStripMenuItem.Size = new System.Drawing.Size(73, 19);
+            this.编辑EToolStripMenuItem.Text = "编辑(E)";
+            // 
+            // 同步火灾风险评估结果ToolStripMenuItem
+            // 
+            this.同步火灾风险评估结果ToolStripMenuItem.Name = "同步火灾风险评估结果ToolStripMenuItem";
+            this.同步火灾风险评估结果ToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.同步火灾风险评估结果ToolStripMenuItem.Text = "同步火灾风险评估结果";
+            this.同步火灾风险评估结果ToolStripMenuItem.Click += new System.EventHandler(this.同步火灾风险评估结果ToolStripMenuItem_Click);
+            // 
+            // 列表展示ToolStripMenuItem
+            // 
+            this.列表展示ToolStripMenuItem.Name = "列表展示ToolStripMenuItem";
+            this.列表展示ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.列表展示ToolStripMenuItem.Text = "列表展示";
             // 
             // panel1
             // 
@@ -219,23 +264,6 @@
             this.缩放到图层ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.缩放到图层ToolStripMenuItem.Text = "缩放到图层";
             this.缩放到图层ToolStripMenuItem.Click += new System.EventHandler(this.缩放到图层ToolStripMenuItem_Click);
-            // 
-            // 查询SToolStripMenuItem
-            // 
-            this.查询SToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.选评估区属性查询ToolStripMenuItem});
-            this.查询SToolStripMenuItem.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.查询SToolStripMenuItem.Name = "查询SToolStripMenuItem";
-            this.查询SToolStripMenuItem.ShortcutKeyDisplayString = "S";
-            this.查询SToolStripMenuItem.Size = new System.Drawing.Size(87, 18);
-            this.查询SToolStripMenuItem.Text = "查询（S）";
-            // 
-            // 选评估区属性查询ToolStripMenuItem
-            // 
-            this.选评估区属性查询ToolStripMenuItem.Name = "选评估区属性查询ToolStripMenuItem";
-            this.选评估区属性查询ToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.选评估区属性查询ToolStripMenuItem.Text = "选评估区属性查询";
-            this.选评估区属性查询ToolStripMenuItem.Click += new System.EventHandler(this.选评估区属性查询ToolStripMenuItem_Click);
             // 
             // axToolbarControl1
             // 
@@ -357,5 +385,8 @@
         private System.Windows.Forms.ToolStripMenuItem 缩放到图层ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 查询SToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 选评估区属性查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 编辑EToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 同步火灾风险评估结果ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 列表展示ToolStripMenuItem;
     }
 }

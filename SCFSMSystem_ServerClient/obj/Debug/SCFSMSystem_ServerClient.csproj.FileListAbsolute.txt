@@ -74,3 +74,5 @@ D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\De
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.MainFrm.resources
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.Properties.Resources.resources
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.csproj.GenerateResource.Cache
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geodatabase.dll
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geodatabase.xml

@@ -14,6 +14,8 @@ using ESRI.ArcGIS.Controls;
 using ESRI.ArcGIS.DataSourcesRaster;
 using ESRI.ArcGIS.Geometry;
 using ESRI.ArcGIS.Display;
+using SCFSMSystem_ServerClient.Model;
+using SCFSMSystem_ServerClient.BLL;
 
 namespace SCFSMSystem_ServerClient
 {
@@ -30,12 +32,16 @@ namespace SCFSMSystem_ServerClient
         }
         private void GisFrm_Load(object sender, EventArgs e)
         {
-            this.container1.Text = StaticStorage.UserName + "用户，欢迎您使用城市火灾安全管理软件！";
-
+            if(StaticObject.user==null)
+            {
+                this.container1.Text = "测试用户，欢迎您使用城市火灾安全管理软件！";
+            }
+            else
+            {
+                this.container1.Text = StaticObject.user.Name + "用户，欢迎您使用城市火灾安全管理软件！";
+            }
             ClearAllData();
-
             mainMapControl.LoadMxFile(@"太原GIS模型构建\TaiYuan（new）.mxd");   //将地图文件赋予MainMapControl中的地图对象
-
 
         }
 
@@ -55,26 +61,13 @@ namespace SCFSMSystem_ServerClient
             System.Drawing.Point cur = MousePosition;
             this.Location = new System.Drawing.Point(cur.X - offset.X, cur.Y - offset.Y);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
         #endregion
 
         #region 控制窗体放大缩小
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Model.StaticForm.MainForm.Show();
+            this.Hide();
+            StaticForm.MainForm.Show();
         }
 
         private int frmSize = 2; //用于存放窗体放大缩小的值
@@ -271,12 +264,19 @@ namespace SCFSMSystem_ServerClient
                         IFeatureLayer pFeatureLayer = pSubLayer as IFeatureLayer;
                         if (pFeatureLayer != null)
                         {
-                            //由于鹰眼地图较小，所以过滤点图层不添加
-                            if (pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryPoint
-                                && pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryMultipoint)
+                            try
                             {
-                                eagleEyeMapControl.AddLayer(pLayer);
+                                //由于鹰眼地图较小，所以过滤点图层不添加
+                                if (pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryPoint
+                                    && pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryMultipoint)
+                                {
+                                    eagleEyeMapControl.AddLayer(pLayer);
+                                }
                             }
+                            catch
+                            {
+
+                            }                          
                         }
                     }
                 }
@@ -285,11 +285,19 @@ namespace SCFSMSystem_ServerClient
                     IFeatureLayer pFeatureLayer = pLayer as IFeatureLayer;
                     if (pFeatureLayer != null)
                     {
-                        if (pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryPoint
-                            && pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryMultipoint)
+                        try
                         {
-                            eagleEyeMapControl.AddLayer(pLayer);
+                            if (pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryPoint
+                            && pFeatureLayer.FeatureClass.ShapeType != esriGeometryType.esriGeometryMultipoint)
+                            {
+                                eagleEyeMapControl.AddLayer(pLayer);
+                            }
                         }
+                        catch
+                        {
+
+                        }
+                        
                     }
                 }
                 //设置鹰眼地图全图显示  
@@ -526,8 +534,46 @@ namespace SCFSMSystem_ServerClient
         }
 
 
+
         #endregion
 
-       
+
+        private void 同步火灾风险评估结果ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //从数据库将areaList加载到内存中的areaList集合
+            string returnMessage = string.Empty;
+            StaticObject.areaList = new AreaInfoService().GetAreaList(out returnMessage);
+            if (returnMessage != "获取成功")
+            {
+                Console.WriteLine("数据获取失败，请检查网络稍后再试！");
+                return;
+            }
+
+            this.mainMapControl.Map.ClearSelection();
+            //获取第4层矢量图层（评估区）
+            IFeatureLayer assessmentLayer = (IFeatureLayer)mainMapControl.Map.Layer[3];
+            IQueryFilter queryString = new QueryFilter();
+            queryString.WhereClause = "\"AreaNum\">0";
+            IFeatureCursor featureCursor = assessmentLayer.Search(queryString, true);
+
+            IFeature feature = featureCursor.NextFeature();
+            while (feature != null)
+            {
+                Console.WriteLine(feature.Value[0]);
+                feature = featureCursor.NextFeature();
+            }
+
+
+
+
+            //while (feature != null)
+            //{
+            //    feature.set_Value(feature.Fields.FindField("height"), 1800);
+            //    feature.Store();
+            //    feature = featureCursor.NextFeature();
+            //}
+            //mainMapControl.ActiveView.Refresh();
+
+        }
     }
 }

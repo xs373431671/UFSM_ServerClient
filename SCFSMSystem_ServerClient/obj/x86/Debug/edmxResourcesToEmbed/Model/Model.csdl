@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xs373431671Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="UFSM_AreaInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AreaNum" Type="Int32" Nullable="false" />
+    <Property Name="Attribute" Type="Byte" />
+    <Property Name="PopQuality" Type="Byte" />
+    <Property Name="BuildingFireResistanceRating" Type="Byte" />
+    <Property Name="PopDensity" Type="Byte" />
+    <Property Name="BuildingYears" Type="Byte" />
+    <Property Name="FireSafetyPropaganda" Type="Byte" />
+    <Property Name="PowerLineLoad" Type="Byte" />
+    <Property Name="FireSafetyManagement" Type="Byte" />
+    <Property Name="AgingOfPowerLines" Type="Byte" />
+    <Property Name="FireInspectionOfKeyBuildings" Type="Byte" />
+    <Property Name="TimeFactor" Type="Byte" />
+    <Property Name="EconomicDensity" Type="Byte" />
+    <Property Name="HighBuildingsNum" Type="Byte" />
+    <Property Name="UndergroundCrowdedSpace" Type="Byte" />
+    <Property Name="DensityOfKeyBuildings" Type="Byte" />
+    <Property Name="RoadCongestion" Type="Byte" />
+    <Property Name="BuildingDensity" Type="Byte" />
+    <Property Name="DistributionOfInflammableStorage" Type="Byte" />
+    <Property Name="FireStationCapacityCoverage" Type="Byte" />
+    <Property Name="FireStationEquipment" Type="Byte" />
+    <Property Name="PublicFireFacilities" Type="Byte" />
+    <Property Name="DepartmentalEmergencyResponse" Type="Byte" />
+    <Property Name="FireAndRescuePlan" Type="Byte" />
+    <Property Name="KeyBuildingsFirePreventBuilt" Type="Byte" />
+    <Property Name="AreaUploadTime" Type="DateTime" Precision="3" />
+    <Property Name="AreaAssessmentYear" Type="Int16" />
+    <Property Name="AreaRiskGrade" Type="Byte" />
+    <Property Name="AreaSize" Type="Int32" />
+    <Property Name="AreaPop" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UFSM_UserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Authority" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AreaNum" Type="Int32" />
+    <Property Name="Department" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="Account" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="xs373431671Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="UFSM_AreaInfo" EntityType="Self.UFSM_AreaInfo" />
+    <EntitySet Name="UFSM_UserInfo" EntityType="Self.UFSM_UserInfo" />
+  </EntityContainer>
+</Schema>

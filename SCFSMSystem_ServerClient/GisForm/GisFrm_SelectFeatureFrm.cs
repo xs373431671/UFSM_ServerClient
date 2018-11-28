@@ -42,6 +42,14 @@ namespace SCFSMSystem_ServerClient
             //对Map中的每个图层进行判断并加载图层名称
             for (int i = 0; i < currentMap.LayerCount; i++)
             {
+                if(currentMap.get_Layer(i) is IFeatureLayer)
+                {
+
+                }
+                else
+                {
+                    break;
+                }
                 //如果该图层为图层组类型，则分别对所包含的每个图层进行操作
                 if (currentMap.get_Layer(i) is GroupLayer)
                 {
@@ -65,7 +73,7 @@ namespace SCFSMSystem_ServerClient
                         }
                     }
                 }
-                //如果图层不是图层组类型，则同样在TreeView控件中的根节点下添加节点
+                // 如果图层不是图层组类型，则同样在TreeView控件中的根节点下添加节点
                 else
                 {
                     layerName = currentMap.get_Layer(i).Name;
@@ -76,8 +84,8 @@ namespace SCFSMSystem_ServerClient
                         treeNode.Tag = featureLayer;
                         treeViewLayers.TopNode.Nodes.Add(treeNode);
                     }
-                }
             }
+        }
             //添加完节点后将根节点展开以显示所有的图层
             treeViewLayers.TopNode.Expand();
             //通过IMap接口的SelectionCount属性可以获取被选择要素的数量
