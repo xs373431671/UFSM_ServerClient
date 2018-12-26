@@ -21,5 +21,12 @@ namespace SCFSMSystem_ServerClient.MainFormPanel
         {
 
         }
+
+        private void OpIsmFormBtn_Click(object sender, EventArgs e)
+        {
+            ISM.ISMForm1 ismForm = new ISM.ISMForm1();
+            ismForm.Show();
+            Model.StaticForm.MainForm.Hide();
+        }
     }
 }

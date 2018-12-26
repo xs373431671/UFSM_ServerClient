@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
-            this.opGisFrmBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.container1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -51,6 +50,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,18 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
-            // 
-            // opGisFrmBtn
-            // 
-            this.opGisFrmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.opGisFrmBtn.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.opGisFrmBtn.Location = new System.Drawing.Point(65, 502);
-            this.opGisFrmBtn.Name = "opGisFrmBtn";
-            this.opGisFrmBtn.Size = new System.Drawing.Size(122, 53);
-            this.opGisFrmBtn.TabIndex = 0;
-            this.opGisFrmBtn.Text = "test";
-            this.opGisFrmBtn.UseVisualStyleBackColor = true;
-            this.opGisFrmBtn.Click += new System.EventHandler(this.opGisFrmBtn_Click);
             // 
             // exitBtn
             // 
@@ -138,7 +126,7 @@
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(65, 186);
+            this.button1.Location = new System.Drawing.Point(19, 203);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 53);
             this.button1.TabIndex = 13;
@@ -150,7 +138,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(65, 245);
+            this.button2.Location = new System.Drawing.Point(19, 262);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 53);
             this.button2.TabIndex = 14;
@@ -162,7 +150,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(65, 304);
+            this.button3.Location = new System.Drawing.Point(19, 321);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 53);
             this.button3.TabIndex = 15;
@@ -174,7 +162,7 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(65, 363);
+            this.button4.Location = new System.Drawing.Point(19, 380);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(143, 53);
             this.button4.TabIndex = 16;
@@ -186,7 +174,7 @@
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.Location = new System.Drawing.Point(65, 422);
+            this.button5.Location = new System.Drawing.Point(19, 439);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(143, 53);
             this.button5.TabIndex = 17;
@@ -196,7 +184,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(11, 127);
+            this.pictureBox2.Location = new System.Drawing.Point(162, 144);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(53, 53);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -205,7 +193,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(11, 186);
+            this.pictureBox3.Location = new System.Drawing.Point(162, 203);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(53, 53);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -214,7 +202,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(11, 245);
+            this.pictureBox4.Location = new System.Drawing.Point(162, 262);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(53, 53);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -223,7 +211,7 @@
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(11, 304);
+            this.pictureBox5.Location = new System.Drawing.Point(162, 321);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(53, 53);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -232,7 +220,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(11, 363);
+            this.pictureBox6.Location = new System.Drawing.Point(162, 380);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(53, 53);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -241,7 +229,7 @@
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(11, 422);
+            this.pictureBox7.Location = new System.Drawing.Point(162, 439);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(53, 53);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -252,7 +240,7 @@
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("黑体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(65, 127);
+            this.button6.Location = new System.Drawing.Point(19, 144);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(143, 53);
             this.button6.TabIndex = 24;
@@ -271,29 +259,39 @@
             this.panel1.Size = new System.Drawing.Size(794, 456);
             this.panel1.TabIndex = 25;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(2, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 16);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "智慧城市火灾安全管理系统";
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1008, 608);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.exitBtn);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.opGisFrmBtn);
             this.Font = new System.Drawing.Font("等线", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -321,8 +319,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button opGisFrmBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel container1;
@@ -343,6 +339,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

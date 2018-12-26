@@ -47,6 +47,7 @@
             this.OpIsmFormBtn.TabIndex = 1;
             this.OpIsmFormBtn.Text = "打开ISM分析模块";
             this.OpIsmFormBtn.UseVisualStyleBackColor = false;
+            this.OpIsmFormBtn.Click += new System.EventHandler(this.OpIsmFormBtn_Click);
             // 
             // label1
             // 
