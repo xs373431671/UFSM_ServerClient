@@ -76,3 +76,6 @@ D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\De
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.csproj.GenerateResource.Cache
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geodatabase.dll
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geodatabase.xml
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.MainFormPanel.ISMPanel.resources
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.MainFormPanel.AssessmentModelPanel.resources
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.MainFormPanel.GISAnalysisPanel.resources

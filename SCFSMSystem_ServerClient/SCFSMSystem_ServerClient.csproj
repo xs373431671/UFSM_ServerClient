@@ -162,11 +162,53 @@
     <Compile Include="GisForm\GisFrm_SelectFeatureFrm.Designer.cs">
       <DependentUpon>GisFrm_SelectFeatureFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ISM\ISMForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISM\ISMForm1.Designer.cs">
+      <DependentUpon>ISMForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISM\ISMForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISM\ISMForm2.Designer.cs">
+      <DependentUpon>ISMForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm\LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm\LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormPanel\AssessmentModelPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormPanel\AssessmentModelPanel.Designer.cs">
+      <DependentUpon>AssessmentModelPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormPanel\FireRiskAssessmentPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormPanel\FireRiskAssessmentPanel.Designer.cs">
+      <DependentUpon>FireRiskAssessmentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormPanel\GISAnalysisPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormPanel\GISAnalysisPanel.Designer.cs">
+      <DependentUpon>GISAnalysisPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormPanel\ISMPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormPanel\ISMPanel.Designer.cs">
+      <DependentUpon>ISMPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormPanel\StaffManagementPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormPanel\StaffManagementPanel.Designer.cs">
+      <DependentUpon>StaffManagementPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="MainFrm.cs">
       <SubType>Form</SubType>
@@ -210,6 +252,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormPanel\AssessmentModelPanel.resx">
+      <DependentUpon>AssessmentModelPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormPanel\FireRiskAssessmentPanel.resx">
+      <DependentUpon>FireRiskAssessmentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormPanel\GISAnalysisPanel.resx">
+      <DependentUpon>GISAnalysisPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormPanel\ISMPanel.resx">
+      <DependentUpon>ISMPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormPanel\StaffManagementPanel.resx">
+      <DependentUpon>StaffManagementPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
