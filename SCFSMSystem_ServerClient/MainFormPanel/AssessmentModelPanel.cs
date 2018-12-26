@@ -16,5 +16,10 @@ namespace SCFSMSystem_ServerClient.MainFormPanel
         {
             InitializeComponent();
         }
+
+        private void AssessmentModelPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
