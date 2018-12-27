@@ -243,6 +243,12 @@
     <Compile Include="Model\UFSM_UserInfo.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="StaffManagementForm\StaffManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffManagementForm\StaffManagementForm.Designer.cs">
+      <DependentUpon>StaffManagementForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GisForm\GisFrm.resx">
       <DependentUpon>GisFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +295,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StaffManagementForm\StaffManagementForm.resx">
+      <DependentUpon>StaffManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>

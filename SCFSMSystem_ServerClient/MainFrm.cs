@@ -33,8 +33,7 @@ namespace SCFSMSystem_ServerClient
                 this.Close();
             }
             myl.Close();
-            
-            
+                      
             pictureBox1.Image = Image.FromFile(@"Picture/mainLogo.png");
             pictureBox2.Image = Image.FromFile(@"Picture/cursor.png");
             pictureBox3.Image = Image.FromFile(@"Picture/cursor.png");
@@ -48,15 +47,23 @@ namespace SCFSMSystem_ServerClient
             pictureBox6.Visible = false;
             pictureBox7.Visible = false;
 
-            ISMPanel ismPanel = new ISMPanel();
-            ismPanel.TopLevel = false;
-            this.panel1.Controls.Add(ismPanel);           
-            ismPanel.WindowState = FormWindowState.Maximized;
-            ismPanel.FormBorderStyle = FormBorderStyle.None;
-            ismPanel.BringToFront();
-            ismPanel.Show();
-            //toolStripStatusLabel1.Text = FormObject.account + "，欢迎您登录智慧城市火灾风险评估系统！";
-            toolStripStatusLabel2.Text = DateTime.Now.ToString();
+            try
+            {
+                ISMPanel ismPanel = new ISMPanel();
+                ismPanel.TopLevel = false;
+                this.panel1.Controls.Add(ismPanel);           
+                ismPanel.WindowState = FormWindowState.Maximized;
+                ismPanel.FormBorderStyle = FormBorderStyle.None;
+                ismPanel.BringToFront();
+                ismPanel.Show();
+                //toolStripStatusLabel1.Text = FormObject.account + "，欢迎您登录智慧城市火灾风险评估系统！";
+                toolStripStatusLabel2.Text = DateTime.Now.ToString();          
+            }
+            catch
+            {
+                this.Close();
+            }
+            
         }
 
         #region 点击窗体任意位置移动窗体

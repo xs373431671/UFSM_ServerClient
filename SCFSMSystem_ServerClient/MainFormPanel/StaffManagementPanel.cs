@@ -16,5 +16,12 @@ namespace SCFSMSystem_ServerClient.MainFormPanel
         {
             InitializeComponent();
         }
+
+        private void OpIsmFormBtn_Click(object sender, EventArgs e)
+        {
+            Model.StaticForm.StaffForm = new StaffManagementForm.StaffManagementForm();
+            Model.StaticForm.MainForm.Hide();
+            Model.StaticForm.StaffForm.Show();
+        }
     }
 }

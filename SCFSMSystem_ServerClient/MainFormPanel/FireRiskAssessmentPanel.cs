@@ -20,6 +20,7 @@ namespace SCFSMSystem_ServerClient.MainFormPanel
 
         private void OpFireRiskAssessmentForm_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             if (StaticForm.GisForm == null)
             {
                 StaticForm.GisForm = new GisFrm();
@@ -30,6 +31,7 @@ namespace SCFSMSystem_ServerClient.MainFormPanel
                 StaticForm.GisForm.Show();
             }
             StaticForm.MainForm.Hide();
+            this.Cursor = Cursors.Arrow;
         }
     }
 }

@@ -43,10 +43,10 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
     <Property Name="Authority" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="AreaNum" Type="Int32" />
+    <Property Name="AreaNum" Type="Int32" Nullable="false" />
     <Property Name="Department" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
     <Property Name="Account" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
     <Property Name="Telephone" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
   </EntityType>

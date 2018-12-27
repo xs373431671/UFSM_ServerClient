@@ -17,7 +17,7 @@ namespace SCFSMSystem_ServerClient.Model
         public int ID { get; set; }
         public string Name { get; set; }
         public string Authority { get; set; }
-        public Nullable<int> AreaNum { get; set; }
+        public int AreaNum { get; set; }
         public string Department { get; set; }
         public string Account { get; set; }
         public string Password { get; set; }

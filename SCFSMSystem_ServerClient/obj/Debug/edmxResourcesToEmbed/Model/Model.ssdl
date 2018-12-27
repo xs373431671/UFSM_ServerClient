@@ -43,10 +43,10 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="8" />
     <Property Name="Authority" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="AreaNum" Type="int" />
+    <Property Name="AreaNum" Type="int" Nullable="false" />
     <Property Name="Department" Type="nvarchar" MaxLength="64" />
     <Property Name="Account" Type="nvarchar" MaxLength="16" Nullable="false" />
-    <Property Name="Password" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="16" />
     <Property Name="Email" Type="nvarchar" MaxLength="32" />
     <Property Name="Telephone" Type="nvarchar" MaxLength="16" />
   </EntityType>
