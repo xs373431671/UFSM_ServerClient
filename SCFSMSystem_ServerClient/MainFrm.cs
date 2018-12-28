@@ -66,6 +66,7 @@ namespace SCFSMSystem_ServerClient
             
         }
 
+
         #region 点击窗体任意位置移动窗体
         private Point offset;
         private void MainFrm_MouseDown_1(object sender, MouseEventArgs e)
@@ -82,6 +83,7 @@ namespace SCFSMSystem_ServerClient
         }
 
         #endregion
+
 
         #region 关闭panel内所有的窗体
         public void CloseAllPanelForm()

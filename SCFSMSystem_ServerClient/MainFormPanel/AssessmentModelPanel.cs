@@ -21,5 +21,21 @@ namespace SCFSMSystem_ServerClient.MainFormPanel
         {
 
         }
+
+        private void OpAssessmentModeForm_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            if (Model.StaticForm.AssessmentModelForm == null)
+            {
+                AssessmentModelForm.AssessmentModelForm modelForm = new AssessmentModelForm.AssessmentModelForm();
+                modelForm.Show();
+            }
+            else
+            {
+                Model.StaticForm.AssessmentModelForm.Show();
+            }
+            Model.StaticForm.MainForm.Hide();
+            this.Cursor = Cursors.Arrow;
+        }
     }
 }

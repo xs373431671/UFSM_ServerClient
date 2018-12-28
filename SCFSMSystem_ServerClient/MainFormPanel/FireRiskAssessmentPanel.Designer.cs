@@ -41,9 +41,9 @@
             this.OpFireRiskAssessmentForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpFireRiskAssessmentForm.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.OpFireRiskAssessmentForm.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.OpFireRiskAssessmentForm.Location = new System.Drawing.Point(652, 414);
+            this.OpFireRiskAssessmentForm.Location = new System.Drawing.Point(573, 414);
             this.OpFireRiskAssessmentForm.Name = "OpFireRiskAssessmentForm";
-            this.OpFireRiskAssessmentForm.Size = new System.Drawing.Size(130, 30);
+            this.OpFireRiskAssessmentForm.Size = new System.Drawing.Size(209, 30);
             this.OpFireRiskAssessmentForm.TabIndex = 1;
             this.OpFireRiskAssessmentForm.Text = "开始评估";
             this.OpFireRiskAssessmentForm.UseVisualStyleBackColor = false;

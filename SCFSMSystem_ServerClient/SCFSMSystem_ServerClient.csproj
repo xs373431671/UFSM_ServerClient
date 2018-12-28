@@ -140,6 +140,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssessmentModelForm\AssessmentModelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssessmentModelForm\AssessmentModelForm.Designer.cs">
+      <DependentUpon>AssessmentModelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="BLL\AreaInfoService.cs" />
     <Compile Include="BLL\UserInfoService.cs" />
     <Compile Include="DAL\AreaInfoDal.cs" />
@@ -249,6 +255,9 @@
     <Compile Include="StaffManagementForm\StaffManagementForm.Designer.cs">
       <DependentUpon>StaffManagementForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AssessmentModelForm\AssessmentModelForm.resx">
+      <DependentUpon>AssessmentModelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GisForm\GisFrm.resx">
       <DependentUpon>GisFrm.cs</DependentUpon>
     </EmbeddedResource>

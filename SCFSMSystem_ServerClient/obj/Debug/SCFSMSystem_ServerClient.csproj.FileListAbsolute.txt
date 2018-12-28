@@ -84,3 +84,4 @@ D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\De
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.MainFormPanel.FireRiskAssessmentPanel.resources
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.MainFormPanel.StaffManagementPanel.resources
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.StaffManagementForm.StaffManagementForm.resources
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.AssessmentModelForm.AssessmentModelForm.resources

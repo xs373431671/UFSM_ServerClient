@@ -24,9 +24,18 @@ namespace SCFSMSystem_ServerClient.MainFormPanel
 
         private void OpIsmFormBtn_Click(object sender, EventArgs e)
         {
-            ISM.ISMForm1 ismForm = new ISM.ISMForm1();
-            ismForm.Show();
+            this.Cursor = Cursors.WaitCursor;
+            if (Model.StaticForm.ISMForm == null)
+            {
+                ISM.ISMForm1 ismForm = new ISM.ISMForm1();
+                ismForm.Show();
+            }
+            else
+            {
+                Model.StaticForm.ISMForm.Show();
+            }
             Model.StaticForm.MainForm.Hide();
+            this.Cursor = Cursors.Arrow;
         }
     }
 }

@@ -41,9 +41,9 @@
             this.OpIsmFormBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpIsmFormBtn.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.OpIsmFormBtn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.OpIsmFormBtn.Location = new System.Drawing.Point(607, 414);
+            this.OpIsmFormBtn.Location = new System.Drawing.Point(585, 414);
             this.OpIsmFormBtn.Name = "OpIsmFormBtn";
-            this.OpIsmFormBtn.Size = new System.Drawing.Size(175, 30);
+            this.OpIsmFormBtn.Size = new System.Drawing.Size(197, 30);
             this.OpIsmFormBtn.TabIndex = 1;
             this.OpIsmFormBtn.Text = "打开人员管理模块";
             this.OpIsmFormBtn.UseVisualStyleBackColor = false;

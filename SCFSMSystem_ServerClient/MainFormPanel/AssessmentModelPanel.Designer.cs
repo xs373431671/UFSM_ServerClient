@@ -42,12 +42,13 @@
             this.OpAssessmentModeForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpAssessmentModeForm.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.OpAssessmentModeForm.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.OpAssessmentModeForm.Location = new System.Drawing.Point(634, 414);
+            this.OpAssessmentModeForm.Location = new System.Drawing.Point(573, 414);
             this.OpAssessmentModeForm.Name = "OpAssessmentModeForm";
-            this.OpAssessmentModeForm.Size = new System.Drawing.Size(148, 30);
+            this.OpAssessmentModeForm.Size = new System.Drawing.Size(209, 30);
             this.OpAssessmentModeForm.TabIndex = 1;
             this.OpAssessmentModeForm.Text = "开始评估模型设置";
             this.OpAssessmentModeForm.UseVisualStyleBackColor = false;
+            this.OpAssessmentModeForm.Click += new System.EventHandler(this.OpAssessmentModeForm_Click);
             // 
             // label1
             // 
