@@ -16,5 +16,10 @@ namespace SCFSMSystem_ServerClient.BLL
             List<UFSM_AreaInfo>areaList= areaInfoDal.GetAreaList(out returnMessage);
             return areaList;
         }
+
+        public bool UpdateAreaRiskGrade(List<UFSM_AreaInfo> areaList)
+        {
+            return new AreaInfoDal().UpdateAreaRiskGrade(areaList);
+        }
     }
 }

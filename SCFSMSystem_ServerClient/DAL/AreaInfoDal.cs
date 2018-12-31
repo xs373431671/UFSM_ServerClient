@@ -34,11 +34,28 @@ namespace SCFSMSystem_ServerClient.DAL
             }
         }
 
-        
-
-
-
-
-
+        public bool UpdateAreaRiskGrade(List<UFSM_AreaInfo> areaList)
+        {
+            using (xs373431671Entities db = new xs373431671Entities())
+            {
+                try
+                {
+                    foreach(UFSM_AreaInfo area in areaList)
+                    {
+                        var areaInfoList = from u in db.UFSM_AreaInfo where u.AreaNum == area.AreaNum select u;
+                        var areaInfo = areaInfoList.FirstOrDefault();
+                        areaInfo.AreaRiskGrade = area.AreaRiskGrade;
+                        db.Entry<UFSM_AreaInfo>(areaInfo).State = System.Data.Entity.EntityState.Modified;
+                        
+                    }
+                    db.SaveChanges();        
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

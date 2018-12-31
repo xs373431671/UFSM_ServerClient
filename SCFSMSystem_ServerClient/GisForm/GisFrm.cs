@@ -41,7 +41,7 @@ namespace SCFSMSystem_ServerClient
                 this.container1.Text = StaticObject.user.Name + "用户，欢迎您使用城市火灾安全管理软件！";
             }
             ClearAllData();
-            mainMapControl.LoadMxFile(@"太原GIS模型构建\TaiYuan（new）.mxd");   //将地图文件赋予MainMapControl中的地图对象
+            mainMapControl.LoadMxFile(@"太原GIS模型构建（test）\TaiYuan（new）.mxd");   //将地图文件赋予MainMapControl中的地图对象
 
         }
 
@@ -540,7 +540,104 @@ namespace SCFSMSystem_ServerClient
 
         private void 同步火灾风险评估结果ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            label2.Visible = true;
+            DialogResult result = MessageBox.Show("确定同步吗，同步数据将上传至数据库覆盖原数据，请谨慎操作！","敏感操作提示",MessageBoxButtons.YesNo);
+            if(result== DialogResult.No)
+            {
+                label2.Visible = false;
+                return;
+            }
             //从数据库将areaList加载到内存中的areaList集合
+            this.Cursor = Cursors.WaitCursor;
+            string returnMessage = string.Empty;
+            StaticObject.areaList = new AreaInfoService().GetAreaList(out returnMessage);
+            if (returnMessage != "获取成功")
+            {
+                label2.Visible = false;
+                Console.WriteLine("数据获取失败，请检查网络稍后再试！");
+                return;
+            }
+
+            //根据权重结果对各区域风险分数进行计算并返回给数据库
+            foreach (UFSM_AreaInfo memoryArea in StaticObject.areaList)
+            {
+                double? resistanceGrade = memoryArea.FireStationCapacityCoverage * StaticObject.IndexWeight["消防站能力覆盖情况"]
+                                        + memoryArea.FireStationEquipment * StaticObject.IndexWeight["消防站装备配备情况"]
+                                        + memoryArea.PublicFireFacilities * StaticObject.IndexWeight["公共消防设施建设情况"]
+                                        + memoryArea.FireAndRescuePlan * StaticObject.IndexWeight["灭火救援预案情况"]
+                                        + memoryArea.DepartmentalEmergencyResponse * StaticObject.IndexWeight["同医疗与交通部门应急联动情况"]
+                                        + memoryArea.KeyBuildingsFirePreventBuilt * StaticObject.IndexWeight["重点消防单位消防自建情况"]
+                                        + memoryArea.FireSafetyManagement * StaticObject.IndexWeight["消防安全管理情况"]
+                                        + memoryArea.RoadCongestion * StaticObject.IndexWeight["道路拥挤情况"];
+
+                double? destructiveGrade = memoryArea.HighBuildingsNum * StaticObject.IndexWeight["高层建筑数量及面积情况"]
+                                          + memoryArea.UndergroundCrowdedSpace * StaticObject.IndexWeight["地下人流密集空间面积"]
+                                          + memoryArea.DistributionOfInflammableStorage * StaticObject.IndexWeight["易燃易爆仓储分布情况"]
+                                          + resistanceGrade * StaticObject.IndexWeight["火灾风险抵御能力"]
+                                          + memoryArea.BuildingDensity * StaticObject.IndexWeight["建筑密度"]
+                                          + memoryArea.EconomicDensity * StaticObject.IndexWeight["经济密度"]
+                                          + memoryArea.DensityOfKeyBuildings * StaticObject.IndexWeight["重点防火单位数量"]
+                                          + memoryArea.Attribute * StaticObject.IndexWeight["用地属性及面积"];
+
+                double? posibilityGrade = memoryArea.PopDensity * StaticObject.IndexWeight["人口密度"]
+                                         + memoryArea.PopQuality * StaticObject.IndexWeight["人口素质"]
+                                         + memoryArea.BuildingFireResistanceRating * StaticObject.IndexWeight["建筑耐火等级分布"]
+                                         + memoryArea.PowerLineLoad * StaticObject.IndexWeight["用电线路负荷"]
+                                         + memoryArea.AgingOfPowerLines * StaticObject.IndexWeight["用电线路老化情况"]
+                                         + memoryArea.FireInspectionOfKeyBuildings * StaticObject.IndexWeight["重点防火单位防火巡查情况"]
+                                         + memoryArea.BuildingYears * StaticObject.IndexWeight["建筑建设年限及分布情况"]
+                                         + memoryArea.FireSafetyPropaganda * StaticObject.IndexWeight["消防安全宣传情况"]
+                                         + memoryArea.TimeFactor * StaticObject.IndexWeight["时间因素"];
+
+                //StaticObject.FireResistanceGrade = (int?)resistanceGrade==null?0: (int)resistanceGrade;
+                //StaticObject.FireDestructiveGrade = (int?)destructiveGrade == null?0:(int)destructiveGrade;
+                //StaticObject.FirePossibilityGrade = (int?)posibilityGrade == null?0:(int)posibilityGrade;
+                memoryArea.AreaRiskGrade = (byte?)(posibilityGrade * 0.5 + destructiveGrade * 0.5)==null?0:(byte?)(posibilityGrade * 0.5 + destructiveGrade * 0.5);
+            }
+            if (!new AreaInfoService().UpdateAreaRiskGrade(StaticObject.areaList))
+            {
+                MessageBox.Show(" 数据在返回数据库时更新失败，请稍后重试！");
+            }
+
+            //开始对gis界面进行可视化评估结果处理
+            this.mainMapControl.Map.ClearSelection();         
+            IFeatureLayer assessmentLayer = (IFeatureLayer)mainMapControl.Map.Layer[3];//获取第4层矢量图层（评估区）
+            IQueryFilter queryString = new QueryFilter();
+            queryString.WhereClause = "\"AreaNum\">0";
+            IFeatureCursor featureCursor = assessmentLayer.Search(queryString, true);
+
+            IFeature feature = featureCursor.NextFeature();
+            while (feature != null)
+            {
+                //将各网格firerisk属性初始化为0
+                feature.set_Value(feature.Fields.FindField("FireRisk"), 0);
+                feature.Store();
+                //根据内存表areaList,对网格的firerisk属性赋值
+                foreach (UFSM_AreaInfo area in StaticObject.areaList)
+                {
+                    if (area.AreaRiskGrade == null)
+                    {
+                        continue;
+                    }
+                    if (area.AreaNum == Convert.ToInt32(feature.Value[2]))
+                    {
+                        feature.set_Value(feature.Fields.FindField("FireRisk"), area.AreaRiskGrade);
+                        feature.Store();
+                        break;
+                    }
+                }
+                feature = featureCursor.NextFeature();
+            }
+            mainMapControl.ActiveView.Refresh();
+            this.Cursor = Cursors.Default;           
+            label2.Visible = false;
+            MessageBox.Show("同步成功！");
+        }
+
+        private void 刷新评估区显示ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //从数据库将areaList加载到内存中的areaList集合
+            this.Cursor = Cursors.WaitCursor;
             string returnMessage = string.Empty;
             StaticObject.areaList = new AreaInfoService().GetAreaList(out returnMessage);
             if (returnMessage != "获取成功")
@@ -549,9 +646,9 @@ namespace SCFSMSystem_ServerClient
                 return;
             }
 
+            //开始对gis界面进行可视化评估结果处理
             this.mainMapControl.Map.ClearSelection();
-            //获取第4层矢量图层（评估区）
-            IFeatureLayer assessmentLayer = (IFeatureLayer)mainMapControl.Map.Layer[3];
+            IFeatureLayer assessmentLayer = (IFeatureLayer)mainMapControl.Map.Layer[3];//获取第4层矢量图层（评估区）
             IQueryFilter queryString = new QueryFilter();
             queryString.WhereClause = "\"AreaNum\">0";
             IFeatureCursor featureCursor = assessmentLayer.Search(queryString, true);
@@ -559,21 +656,28 @@ namespace SCFSMSystem_ServerClient
             IFeature feature = featureCursor.NextFeature();
             while (feature != null)
             {
-                Console.WriteLine(feature.Value[0]);
+                //将各网格firerisk属性初始化为0
+                feature.set_Value(feature.Fields.FindField("FireRisk"), 0);
+                feature.Store();
+                //根据内存表areaList,对网格的firerisk属性赋值
+                foreach (UFSM_AreaInfo area in StaticObject.areaList)
+                {
+                    if (area.AreaRiskGrade == null)
+                    {
+                        continue;
+                    }
+                    if (area.AreaNum == Convert.ToInt32(feature.Value[2]))
+                    {
+                        feature.set_Value(feature.Fields.FindField("FireRisk"), area.AreaRiskGrade);
+                        feature.Store();
+                        break;
+                    }
+                }
                 feature = featureCursor.NextFeature();
             }
-
-
-
-
-            //while (feature != null)
-            //{
-            //    feature.set_Value(feature.Fields.FindField("height"), 1800);
-            //    feature.Store();
-            //    feature = featureCursor.NextFeature();
-            //}
-            //mainMapControl.ActiveView.Refresh();
-
+            mainMapControl.ActiveView.Refresh();
+            this.Cursor = Cursors.Default;
+            MessageBox.Show("刷新成功！");
         }
     }
 }

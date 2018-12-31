@@ -608,9 +608,9 @@
             this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitBtn.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.exitBtn.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.exitBtn.Location = new System.Drawing.Point(691, 2);
+            this.exitBtn.Location = new System.Drawing.Point(713, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(83, 30);
+            this.exitBtn.Size = new System.Drawing.Size(61, 30);
             this.exitBtn.TabIndex = 30;
             this.exitBtn.Text = "Exit";
             this.exitBtn.UseVisualStyleBackColor = true;

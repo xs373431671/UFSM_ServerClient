@@ -17,7 +17,22 @@ namespace SCFSMSystem_ServerClient.ISM
         {
             InitializeComponent();
         }
+        #region 点击窗体任意位置移动窗体
+        private Point offset;
+        private void MainFrm_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            if (MouseButtons.Left != e.Button) return;
+            Point cur = this.PointToScreen(e.Location);
+            offset = new Point(cur.X - this.Left, cur.Y - this.Top);
+        }
+        private void MainFrm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (MouseButtons.Left != e.Button) return;
+            Point cur = MousePosition;
+            this.Location = new Point(cur.X - offset.X, cur.Y - offset.Y);
+        }
 
+        #endregion
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -61,6 +76,12 @@ namespace SCFSMSystem_ServerClient.ISM
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StaticForm.MainForm.Show();
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
             StaticForm.MainForm.Show();
