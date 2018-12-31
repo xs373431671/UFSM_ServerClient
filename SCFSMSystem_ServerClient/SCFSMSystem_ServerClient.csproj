@@ -69,6 +69,7 @@
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
     <Reference Include="ESRI.ArcGIS.AxControls, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
@@ -101,6 +102,7 @@
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
     <Reference Include="ESRI.ArcGIS.GlobeCore, Version=10.2.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -150,6 +152,12 @@
     <Compile Include="BLL\UserInfoService.cs" />
     <Compile Include="DAL\AreaInfoDal.cs" />
     <Compile Include="DAL\UserInfoDal.cs" />
+    <Compile Include="GISAnalysis\GISAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GISAnalysis\GISAnalysis.Designer.cs">
+      <DependentUpon>GISAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="GisForm\GisFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +265,9 @@
     </Compile>
     <EmbeddedResource Include="AssessmentModelForm\AssessmentModelForm.resx">
       <DependentUpon>AssessmentModelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GISAnalysis\GISAnalysis.resx">
+      <DependentUpon>GISAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GisForm\GisFrm.resx">
       <DependentUpon>GisFrm.cs</DependentUpon>

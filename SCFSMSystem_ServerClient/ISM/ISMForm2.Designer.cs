@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ISMForm2));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -162,6 +163,7 @@
             this.Controls.Add(this.richTextBox1);
             this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ISMForm2";
             this.Text = "ISM分析";
             this.Load += new System.EventHandler(this.ISMForm2_Load);

@@ -13,6 +13,7 @@ namespace SCFSMSystem_ServerClient.Model
         public static Form GisForm { get; set; }
         public static Form ISMForm { get; set; }
         public static Form StaffForm { get; set; }
+        public static Form GisAnalysisForm { get; set; }
         public static Form AssessmentModelForm { get; set; }
     }
 }

@@ -41,12 +41,13 @@
             this.OpGISAnalysisForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpGISAnalysisForm.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.OpGISAnalysisForm.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.OpGISAnalysisForm.Location = new System.Drawing.Point(610, 414);
+            this.OpGISAnalysisForm.Location = new System.Drawing.Point(527, 414);
             this.OpGISAnalysisForm.Name = "OpGISAnalysisForm";
-            this.OpGISAnalysisForm.Size = new System.Drawing.Size(172, 30);
+            this.OpGISAnalysisForm.Size = new System.Drawing.Size(255, 30);
             this.OpGISAnalysisForm.TabIndex = 1;
             this.OpGISAnalysisForm.Text = "打开GIS地理分析模块";
             this.OpGISAnalysisForm.UseVisualStyleBackColor = false;
+            this.OpGISAnalysisForm.Click += new System.EventHandler(this.OpGISAnalysisForm_Click);
             // 
             // label1
             // 

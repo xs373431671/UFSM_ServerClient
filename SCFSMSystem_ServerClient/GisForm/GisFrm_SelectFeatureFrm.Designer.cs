@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("图层");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GisFrm_SelectFeatureFrm));
             this.treeViewLayers = new System.Windows.Forms.TreeView();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.labelLayerSelectionCount = new System.Windows.Forms.Label();
@@ -106,6 +107,7 @@
             this.Controls.Add(this.labelLayerSelectionCount);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.treeViewLayers);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GisFrm_SelectFeatureFrm";

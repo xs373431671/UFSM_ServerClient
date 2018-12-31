@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AssessmentModelForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -60,6 +61,19 @@
             this.label41 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox99 = new System.Windows.Forms.TextBox();
             this.textBox98 = new System.Windows.Forms.TextBox();
             this.textBox97 = new System.Windows.Forms.TextBox();
@@ -162,19 +176,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.label30 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -660,6 +661,198 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "专家调查表设置";
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button7.Location = new System.Drawing.Point(708, 426);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(201, 49);
+            this.button7.TabIndex = 132;
+            this.button7.Text = "计算权重并修正评估模型";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(820, 370);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(89, 41);
+            this.button6.TabIndex = 16;
+            this.button6.Text = "恢复默认值";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label39
+            // 
+            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label39.Location = new System.Drawing.Point(58, 442);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(120, 16);
+            this.label39.TabIndex = 127;
+            this.label39.Text = "专家人数设置：";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.numericUpDown1.Location = new System.Drawing.Point(183, 440);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(51, 23);
+            this.numericUpDown1.TabIndex = 131;
+            this.numericUpDown1.TabStop = false;
+            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // richTextBox9
+            // 
+            this.richTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox9.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox9.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox9.Location = new System.Drawing.Point(821, 38);
+            this.richTextBox9.Name = "richTextBox9";
+            this.richTextBox9.ReadOnly = true;
+            this.richTextBox9.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox9.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox9.TabIndex = 129;
+            this.richTextBox9.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox8
+            // 
+            this.richTextBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox8.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox8.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox8.Location = new System.Drawing.Point(726, 38);
+            this.richTextBox8.Name = "richTextBox8";
+            this.richTextBox8.ReadOnly = true;
+            this.richTextBox8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox8.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox8.TabIndex = 130;
+            this.richTextBox8.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox7
+            // 
+            this.richTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox7.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox7.Location = new System.Drawing.Point(631, 38);
+            this.richTextBox7.Name = "richTextBox7";
+            this.richTextBox7.ReadOnly = true;
+            this.richTextBox7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox7.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox7.TabIndex = 129;
+            this.richTextBox7.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox6
+            // 
+            this.richTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox6.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox6.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox6.Location = new System.Drawing.Point(536, 38);
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.ReadOnly = true;
+            this.richTextBox6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox6.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox6.TabIndex = 124;
+            this.richTextBox6.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox5
+            // 
+            this.richTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox5.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox5.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox5.Location = new System.Drawing.Point(441, 38);
+            this.richTextBox5.Name = "richTextBox5";
+            this.richTextBox5.ReadOnly = true;
+            this.richTextBox5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox5.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox5.TabIndex = 123;
+            this.richTextBox5.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox4.Location = new System.Drawing.Point(346, 38);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.ReadOnly = true;
+            this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox4.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox4.TabIndex = 122;
+            this.richTextBox4.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox3.Location = new System.Drawing.Point(251, 38);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
+            this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox3.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox3.TabIndex = 121;
+            this.richTextBox3.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox2.Location = new System.Drawing.Point(156, 38);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+            this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox2.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox2.TabIndex = 120;
+            this.richTextBox2.Text = "同医疗与交通部门应急联动情况";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.richTextBox1.Location = new System.Drawing.Point(61, 38);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.richTextBox1.Size = new System.Drawing.Size(89, 36);
+            this.richTextBox1.TabIndex = 119;
+            this.richTextBox1.Text = "同医疗与交通部门应急联动情况";
             // 
             // textBox99
             // 
@@ -1673,198 +1866,6 @@
             this.label30.TabIndex = 15;
             this.label30.Text = "城市区域火灾风险评估模型修正";
             // 
-            // label39
-            // 
-            this.label39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label39.Location = new System.Drawing.Point(58, 442);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(120, 16);
-            this.label39.TabIndex = 127;
-            this.label39.Text = "专家人数设置：";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox1.Location = new System.Drawing.Point(61, 38);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox1.TabIndex = 119;
-            this.richTextBox1.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox2.Location = new System.Drawing.Point(156, 38);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.ReadOnly = true;
-            this.richTextBox2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox2.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox2.TabIndex = 120;
-            this.richTextBox2.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox3.Location = new System.Drawing.Point(251, 38);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox3.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox3.TabIndex = 121;
-            this.richTextBox3.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox4.Location = new System.Drawing.Point(346, 38);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.ReadOnly = true;
-            this.richTextBox4.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox4.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox4.TabIndex = 122;
-            this.richTextBox4.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox5.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox5.Location = new System.Drawing.Point(441, 38);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.ReadOnly = true;
-            this.richTextBox5.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox5.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox5.TabIndex = 123;
-            this.richTextBox5.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox6
-            // 
-            this.richTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox6.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox6.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox6.Location = new System.Drawing.Point(536, 38);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.ReadOnly = true;
-            this.richTextBox6.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox6.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox6.TabIndex = 124;
-            this.richTextBox6.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox7
-            // 
-            this.richTextBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox7.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox7.Location = new System.Drawing.Point(631, 38);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.ReadOnly = true;
-            this.richTextBox7.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox7.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox7.TabIndex = 129;
-            this.richTextBox7.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox8
-            // 
-            this.richTextBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox8.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox8.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox8.Location = new System.Drawing.Point(726, 38);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.ReadOnly = true;
-            this.richTextBox8.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox8.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox8.TabIndex = 130;
-            this.richTextBox8.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // richTextBox9
-            // 
-            this.richTextBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.richTextBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox9.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox9.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.richTextBox9.Location = new System.Drawing.Point(821, 38);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.ReadOnly = true;
-            this.richTextBox9.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox9.Size = new System.Drawing.Size(89, 36);
-            this.richTextBox9.TabIndex = 129;
-            this.richTextBox9.Text = "同医疗与交通部门应急联动情况";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericUpDown1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.numericUpDown1.Location = new System.Drawing.Point(183, 440);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(51, 23);
-            this.numericUpDown1.TabIndex = 131;
-            this.numericUpDown1.TabStop = false;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(820, 370);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 41);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "恢复默认值";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Location = new System.Drawing.Point(708, 426);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(201, 49);
-            this.button7.TabIndex = 132;
-            this.button7.Text = "计算权重并修正评估模型";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // exitBtn
             // 
             this.exitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1893,6 +1894,7 @@
             this.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AssessmentModelForm";
             this.Text = "AssessmentModelForm";
             this.Load += new System.EventHandler(this.AssessmentModelForm_Load);

@@ -1071,6 +1071,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(780, 760);
             this.Name = "ISMForm1";
             this.Text = "初始化邻接矩阵";

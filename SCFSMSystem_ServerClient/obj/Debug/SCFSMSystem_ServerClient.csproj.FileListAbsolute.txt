@@ -85,3 +85,14 @@ D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\De
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.MainFormPanel.StaffManagementPanel.resources
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.StaffManagementForm.StaffManagementForm.resources
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.AssessmentModelForm.AssessmentModelForm.resources
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.GISAnalysis.GISAnalysis.resources
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.AnalysisTools.dll
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geoprocessor.dll
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geoprocessing.dll
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.DataSourcesNetCDF.dll
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.GeoAnalyst.dll
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.AnalysisTools.xml
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geoprocessor.xml
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geoprocessing.xml
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.DataSourcesNetCDF.xml
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.GeoAnalyst.xml

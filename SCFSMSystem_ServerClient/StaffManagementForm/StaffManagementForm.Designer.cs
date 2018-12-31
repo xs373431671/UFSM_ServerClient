@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffManagementForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.DGV_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DGV_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -640,6 +641,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StaffManagementForm";
             this.Text = "StaffManagementForm";
             this.Load += new System.EventHandler(this.StaffManagementForm_Load);
