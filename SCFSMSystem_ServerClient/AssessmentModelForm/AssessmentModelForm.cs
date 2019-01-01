@@ -244,6 +244,7 @@ namespace SCFSMSystem_ServerClient.AssessmentModelForm
 
         private void AssessmentModelForm_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             StaticForm.AssessmentModelForm = this;
             numericUpDown1.Value = 10;
             foreach(Control c in groupBox4.Controls)

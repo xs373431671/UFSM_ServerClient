@@ -35,6 +35,7 @@ namespace SCFSMSystem_ServerClient
         //在窗体加载时执行本函数，加载所有具有选择要素的图层
         private void FormSelection_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             IFeatureLayer featureLayer; //设置临时变量存储当前矢量图层
             string layerName;   //设置临时变量存储当前图层的名称
             TreeNode treeNode;  //设置临时变量存储当前树节点的信息

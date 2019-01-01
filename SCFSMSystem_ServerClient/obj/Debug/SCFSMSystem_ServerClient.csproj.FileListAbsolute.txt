@@ -96,3 +96,4 @@ D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\De
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.Geoprocessing.xml
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.DataSourcesNetCDF.xml
 D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\bin\Debug\ESRI.ArcGIS.GeoAnalyst.xml
+D:\visual studio 2015\Projects\UFSM_ServerClient\SCFSMSystem_ServerClient\obj\Debug\SCFSMSystem_ServerClient.GISAnalysis.HazardSourceSettingForm.resources

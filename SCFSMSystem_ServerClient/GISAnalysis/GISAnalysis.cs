@@ -20,6 +20,8 @@ using System.Windows.Forms;
 
 namespace SCFSMSystem_ServerClient.GISAnalysis
 {
+    public delegate void SetTextValue(double d);
+
     public partial class GISAnalysis : Form
     {
         public GISAnalysis()
@@ -31,8 +33,16 @@ namespace SCFSMSystem_ServerClient.GISAnalysis
             pEnv = eagleEyeMapControl.Extent;
             DrawRectangle(pEnv);
         }
+
+        //委托执行方法，更改创体内危险源tnt当量值
+        public void ChangeTNT(double d)
+        {
+            this.textBox3.Text = string.Format("{0}", d.ToString("0.000"));
+        }
+
         private void GISAnalysis_Load(object sender, EventArgs e)
         {
+            this.StartPosition = FormStartPosition.CenterScreen;
             if (StaticObject.user == null)
             {
                 this.container1.Text = "测试用户，欢迎您使用城市火灾安全管理软件！";
@@ -44,6 +54,12 @@ namespace SCFSMSystem_ServerClient.GISAnalysis
             ClearAllData();
             mainMapControl.LoadMxFile(@"太原GIS模型构建（分析版）\TaiYuan（new）.mxd");   //将地图文件赋予MainMapControl中的地图对象
 
+            this.textBox1.Text = "45";
+            this.textBox2.Text = "4";
+
+            
+            comboBox1.SelectedItem = comboBox1.Items[0];
+            
         }
 
         #region 点击窗体任意处移动窗体
@@ -546,6 +562,30 @@ namespace SCFSMSystem_ServerClient.GISAnalysis
 
         private void button1_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("确定生成消防站有效覆盖区域吗？可能需要花费较长时间，生成时请勿操作计算机！","提示",MessageBoxButtons.YesNo);
+            if(result!= DialogResult.Yes)
+            { return; }
+            this.Cursor = Cursors.WaitCursor;
+
+            try
+            {
+                double a = double.Parse(textBox1.Text);
+                double b = double.Parse(textBox2.Text);
+                if(a<=0||a>999||b<=0||b>999)
+                {
+                    MessageBox.Show("请填入符合实际情况的数值！");
+                    return;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("请填入符合实际情况的数值！");
+                return;
+            }
+            
+            
+            
+            
             //缓冲区分析，GP工具调用
             Geoprocessor gp = new Geoprocessor();
             gp.OverwriteOutput = true;  //新生成的文件可以覆盖旧生成的文件
@@ -558,8 +598,12 @@ namespace SCFSMSystem_ServerClient.GISAnalysis
             string filePath = AppDomain.CurrentDomain.SetupInformation.ApplicationBase + @"太原GIS模型构建（分析版）";
             pBuffer.out_feature_class = filePath+"\\" + pLayer.Name + ".shp";
 
+            //计算可达距离
+            double longer=double.Parse(textBox1.Text) * 1000 / 60 * double.Parse(textBox2.Text);
+            int longer2 = (int)longer;
+            
             //设置缓冲区距离
-            pBuffer.buffer_distance_or_field = textBox1.Text+" Meters";
+            pBuffer.buffer_distance_or_field = longer2.ToString()+" Meters";
             pBuffer.dissolve_option = "ALL";
 
             //执行缓冲区分析
@@ -569,6 +613,32 @@ namespace SCFSMSystem_ServerClient.GISAnalysis
             this.mainMapControl.AddShapeFile(filePath, pLayer.Name + ".shp");
             this.mainMapControl.MoveLayerTo(1, 0);
             this.mainMapControl.MoveLayerTo(1, 7);
+            this.Cursor = Cursors.Default;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if(StaticForm.HazardSourceSettingForm==null)
+            {
+                HazardSourceSettingForm h = new HazardSourceSettingForm(ChangeTNT);
+                StaticForm.HazardSourceSettingForm = h;  
+                h.Show();
+                this.Hide();
+            }
+            else
+            {
+                StaticForm.HazardSourceSettingForm.Show();
+                this.Hide();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string hazard = comboBox1.SelectedItem.ToString();
+            double Equality_TNT = double.Parse(textBox3.Text);
+            double deathR = 13.6 * Math.Pow(Equality_TNT*4200 / 1000, 0.37);
+            //double heavyHurtR =5000*(1;
+            //double smallHurtR =;
 
         }
     }

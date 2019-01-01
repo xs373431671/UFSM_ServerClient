@@ -15,5 +15,6 @@ namespace SCFSMSystem_ServerClient.Model
         public static Form StaffForm { get; set; }
         public static Form GisAnalysisForm { get; set; }
         public static Form AssessmentModelForm { get; set; }
+        public static Form HazardSourceSettingForm { get; set; }
     }
 }

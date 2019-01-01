@@ -32,7 +32,8 @@ namespace SCFSMSystem_ServerClient
         }
         private void GisFrm_Load(object sender, EventArgs e)
         {
-            if(StaticObject.user==null)
+            this.StartPosition = FormStartPosition.CenterScreen;
+            if (StaticObject.user==null)
             {
                 this.container1.Text = "测试用户，欢迎您使用城市火灾安全管理软件！";
             }

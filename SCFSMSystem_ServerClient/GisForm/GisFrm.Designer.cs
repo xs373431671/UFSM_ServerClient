@@ -197,7 +197,7 @@
             // 
             this.axLicenseControl1.Enabled = true;
             this.axLicenseControl1.Location = new System.Drawing.Point(827, 543);
-            this.axLicenseControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axLicenseControl1.Margin = new System.Windows.Forms.Padding(2);
             this.axLicenseControl1.Name = "axLicenseControl1";
             this.axLicenseControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axLicenseControl1.OcxState")));
             this.axLicenseControl1.Size = new System.Drawing.Size(32, 32);
@@ -341,16 +341,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(953, 564);
+            this.Controls.Add(this.mainMapControl);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.maxMinBtn);
             this.Controls.Add(this.axToolbarControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.axLicenseControl1);
-            this.Controls.Add(this.eagleEyeMapControl);
-            this.Controls.Add(this.mainMapControl);
             this.Controls.Add(this.tOCControl);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.eagleEyeMapControl);
             this.Font = new System.Drawing.Font("黑体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.Color.DodgerBlue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

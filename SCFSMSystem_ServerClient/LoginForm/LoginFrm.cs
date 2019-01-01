@@ -22,7 +22,7 @@ namespace SCFSMSystem_ServerClient
 
         private void LoginFrm_Load(object sender, EventArgs e)
         {
-            
+            this.StartPosition = FormStartPosition.CenterScreen;
             pictureBox1.Image = Image.FromFile(@"Picture/Logo1.jpg");
             pictureBox2.Image = Image.FromFile(@"Picture/SmartCityText.jpg");
             if (!File.Exists("Xml/UserInfo.xml")) //判断用户信息xml文件（用于存储帐号密码）是否存在，,存则调取信息，不存在则创建，然后调取信息
